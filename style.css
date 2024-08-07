@@ -12,14 +12,17 @@ body, html {
 .container {
     display: flex;
     height: 100%;
+    width: 100vw;
 }
 
 .image-sidebar {
-    flex: 1;
+    flex: 2;
     background-image: url(tim-umphreys-98br0uaRJsM-unsplash.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
+    color: white
+
 }
 
 .logo-container {
@@ -36,19 +39,100 @@ body, html {
 }
 
 .logo {
-    height: 50px;
+    height: 100px;
     margin-right: 10px;
 }
 
 .logo-container h1 {
     font-family: 'Norse Bold', sans-serif;
-    font-size:  4rem;
+    font-size:  5rem;
+}
+
+.credit {
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .content {
-    flex: 1.5; 
+    flex: 3; 
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #f9fafb;
+    overflow-y: auto;
+}
+
+.intro, .form-section, button, .login-link {
+    margin-bottom: 20px;
+}
+
+.form-section {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 9px 9px rgb(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 0.8rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #e5e7eb;
+    border-radius: 3px;
+}
+
+input:focus {
+    border-color: blue;
+    box-shadow: 0 0 6px rgba(0, 0, 255, 0.2)
+}
+
+input:invalid {
+    border-color: red;
+}
+
+button {
+    background-color: #596d48;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.credit a, .login-link a {
+    color: #596d48;
+    text-decoration: none;
+}
+
+/* Assignment mentioned not to worry about responsive design but here's a bit */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .image-sidebar, .content {
+        flex: none;
+    }
+    .image-sidebar {
+        height: 200px;
+    }
 }
