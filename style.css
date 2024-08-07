@@ -22,6 +22,29 @@ body, html {
     position: relative;
 }
 
+.logo-container {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-container h1 {
+    font-family: 'Norse Bold', sans-serif;
+    font-size:  4rem;
+}
+
 .content {
     flex: 1.5; 
     padding: 20px;
